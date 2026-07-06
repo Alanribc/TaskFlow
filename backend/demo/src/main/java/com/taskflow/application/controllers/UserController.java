@@ -41,7 +41,6 @@ public class UserController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> getId(@PathVariable Long id){
-        service.delete(id);
         return ResponseEntity.ok().body(service.getId(id));
     }
 
@@ -50,7 +49,7 @@ public class UserController {
         return ResponseEntity.ok().body(service.getAll());
     }
 
-    @PutMapping
+    @PutMapping(value = "/{id}")
     public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User obj){
         obj.setId(id);
         return ResponseEntity.ok().body(service.update(obj));

@@ -36,7 +36,6 @@ public class TarefaController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Tarefa> getId(@PathVariable Long id){
-        service.delete(id);
         return ResponseEntity.ok().body(service.getId(id));
     }
 

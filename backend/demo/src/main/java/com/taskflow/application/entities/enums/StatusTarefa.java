@@ -4,5 +4,5 @@ public enum StatusTarefa {
     
     PENDENTE,
     EM_ANDAMENTO,
-    CONCLUÍDA
+    CONCLUIDA
 }

@@ -1,5 +1,6 @@
 package com.taskflow.application.services;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -7,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.taskflow.application.entities.Tarefa;
+import com.taskflow.application.entities.enums.StatusTarefa;
 import com.taskflow.application.repositories.TarefaRepository;
 import com.taskflow.application.services.exception.EntityNotFound;
 
@@ -47,5 +49,15 @@ public class TarefaService {
 
     private void updateTarefa(Optional<Tarefa> newObj, Tarefa obj){
         newObj.get().setTitulo(obj.getTitulo());
+        newObj.get().setDescricao(obj.getDescricao());
+        newObj.get().setStatus(obj.getStatus());
+        newObj.get().setPrioridade(obj.getPrioridade());
+
+        if(obj.getStatus() == StatusTarefa.CONCLUIDA && 
+            newObj.get().getConcluidoEm() == null){
+        obj.setConcluidoEm(LocalDateTime.now());
     }
+    
+
+    
 }

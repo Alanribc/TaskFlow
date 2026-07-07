@@ -14,8 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.taskflow.application.dto.CreateTarefaDTO;
 import com.taskflow.application.entities.Tarefa;
 import com.taskflow.application.services.TarefaService;
+
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping(value = "/tarefas")
@@ -24,8 +27,8 @@ public class TarefaController {
     private TarefaService service;
 
     @PostMapping
-    public ResponseEntity<Tarefa> create(@RequestBody Tarefa obj){
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.create(obj));
+    public ResponseEntity<Tarefa> create(@Valid @RequestBody CreateTarefaDTO dto){
+        return ResponseEntity.status(HttpStatus.CREATED).body(service.create(dto));
     }
 
     @DeleteMapping(value = "/{id}")

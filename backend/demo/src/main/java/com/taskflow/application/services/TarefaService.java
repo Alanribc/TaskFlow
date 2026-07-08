@@ -91,8 +91,10 @@ public class TarefaService {
         if(obj.getStatus() == StatusTarefa.CONCLUIDA && 
             newObj.get().getConcluidoEm() == null){
         obj.setConcluidoEm(LocalDateTime.now());
+        }
     }
-    
 
     
 }
+
+

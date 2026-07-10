@@ -47,7 +47,7 @@ public class TarefaController {
         return ResponseEntity.ok().body(service.getAll());
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<Tarefa> update(@PathVariable Long id, @RequestBody Tarefa obj){
         obj.setId(id);
         return ResponseEntity.ok().body(service.update(obj));

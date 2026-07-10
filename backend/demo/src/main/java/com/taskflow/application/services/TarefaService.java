@@ -22,6 +22,7 @@ public class TarefaService {
     @Autowired
     private TarefaRepository repository;
 
+    @Autowired
     private UserRepository userRepository;
 
     public TarefaDTO toDTO(Tarefa tarefa){

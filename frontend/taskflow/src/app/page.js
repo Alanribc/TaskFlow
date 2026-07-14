@@ -1,5 +1,3 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -7,7 +5,7 @@ export default function Home() {
       <main>
         <aside></aside>
         <section>
-          <article>
+          <article className="articleInicial">
             <h1>Bem-vindo ao Taskflow!</h1>
             <p>Nesse aplicativo, você poderá organizar suas tarefas e rotina de forma simples e fácil.</p>
           </article>

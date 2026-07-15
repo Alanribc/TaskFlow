@@ -70,3 +70,14 @@ body {
 .articleInicial{
   text-align: center;
 }
+
+.minhasTarefas{
+  color: blue, 
+}
+
+.cardTarefa{
+  background-color: rgba(240, 248, 255, 0.759);
+  border-radius: 15px;
+  width: 25%;
+  margin-left: 5%;
+}

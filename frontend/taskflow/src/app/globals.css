@@ -71,13 +71,32 @@ body {
   text-align: center;
 }
 
-.minhasTarefas{
-  color: blue, 
-}
+
 
 .cardTarefa{
-  background-color: rgba(240, 248, 255, 0.759);
+  background-color: rgba(255, 242, 190, 0.759);
+  border-color: rgba(255, 242, 190, 0.842);
   border-radius: 15px;
   width: 25%;
   margin-left: 5%;
+  margin-bottom: 3%;
+  border-style: outset;
+  border-width: 5;
+}
+
+.cardTarefa:hover{
+    border-style: inset;
+    background-color:rgba(255, 234, 150, 0.91);
+    transition: 1s;
+}
+
+.tituloTarefa{
+  text-align: center;
+  background-color: wheat;
+}
+
+.repositorioTarefas{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }

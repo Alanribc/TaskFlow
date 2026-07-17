@@ -1,8 +1,12 @@
+import { Menu } from "./components/elements/Menu";
 
 export default function Home() {
   return (
     <div>
       <main>
+        <header>
+          <Menu></Menu>
+        </header>
         <aside></aside>
         <section>
           <article className="articleInicial">

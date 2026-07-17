@@ -1,3 +1,4 @@
+import { Menu } from "../components/elements/Menu";
 import { getTarefas } from "../services/api"
 
 export default async function PageTarefas(){
@@ -6,6 +7,9 @@ export default async function PageTarefas(){
 
     return (
         <section>
+            <header>
+                <Menu></Menu>
+            </header>
             <article>
                 <div>
                     <h1 className="minhasTarefas">Minhas tarefas</h1>

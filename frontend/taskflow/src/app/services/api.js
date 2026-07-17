@@ -12,6 +12,16 @@ export async function getTarefas () {
     return resp.json();
 }
 
+export async function getTarefaByID(id) {
+    const resp = await fetch(`${API_URL}/tarefas/${id}`);
+        
+    if(!resp.ok){
+        throw new Error("Erro ao buscar tarefa!");
+    }
+
+    return resp.json();
+}
+
 export async function criarTarefa(tarefa) {
     const resp = await fetch(`${API_URL}/tarefas`, {
         method: "POST",

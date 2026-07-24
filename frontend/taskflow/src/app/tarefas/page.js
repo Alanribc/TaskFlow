@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Menu } from "../components/elements/Menu";
 import { getTarefas } from "../services/api"
+import Image from "next/image";
 
 export default async function PageTarefas(){
 
@@ -14,6 +15,16 @@ export default async function PageTarefas(){
             <article>
                 <div className="minhasTarefas">
                     <h1>Minhas tarefas</h1>
+                    <section className="sectionAdicionar">
+                        <Image
+                            src = "/mais-pequeno.png"
+                            width = {100}
+                            height = {100}
+                            alt = "sinal de mais"
+                            className="sinaldeMais"
+                        ></Image>
+                        <h2>Adicionar Tarefa</h2>
+                    </section>
                 </div>
                 <article className="repositorioTarefas">
                     {tarefas.length === 0 ? (

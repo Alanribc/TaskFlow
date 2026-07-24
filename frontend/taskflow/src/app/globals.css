@@ -78,18 +78,21 @@ body {
   border-color: rgba(255, 242, 190, 0.842);
   border-radius: 15px;
   width: 25%;
-  margin-left: 5%;
-  margin-bottom: 3%;
+  margin: 10px 20px 10px 20px;
   border-style: outset;
   border-width: 5;
   text-decoration: none;
   color: black;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background-color 0.3s ease;
 }
 
 .cardTarefa:hover{
     border-style: inset;
     background-color:rgba(255, 234, 150, 0.91);
     transition: 1s;
+    transform: translateY(-4px);
 }
 
 .tituloTarefa{
@@ -101,9 +104,80 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: space-between;
 }
 
 
 .minhasTarefas h1 {
   padding-left: 10px;
+  display: inline;
+}
+
+.minhasTarefas{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.repositorioTarefaUnica{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.cardTarefaUnica{
+  background-color: rgba(255, 242, 190, 0.759);
+  border-color: rgba(255, 242, 190, 0.842);
+  border-radius: 15px;
+  width: 80%;
+  margin: 10px 20px 10px 20px;
+  border-style: outset;
+  border-width: 5;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background-color 0.3s ease;
+}
+
+.cardTarefaUnica:hover{
+    border-style: inset;
+    background-color:rgba(255, 234, 150, 0.91);
+    transition: 1s;
+    transform: translateY(-4px);
+}
+
+.sinaldeMais{
+  width: 30px;
+  height: 30px;
+}
+
+.sectionAdicionar{
+  display:inline-flex;
+  align-items: center;
+  text-align: center;
+}
+
+.formAdicionar{
+  background-color: rgba(255, 242, 190, 0.759);
+  border-color: rgba(255, 242, 190, 0.842);
+  border-radius: 15px;
+  width: 80%;
+  margin: 10px 20px 10px 20px;
+  border-style: outset;
+  border-width: 5;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background-color 0.3s ease;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.formAdicionar:hover{
+  border-style: inset;
+  background-color:rgba(255, 234, 150, 0.91);
+  transition: 1s;
 }
